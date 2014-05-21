@@ -1,13 +1,15 @@
-## Put comments here that give an overall description of what your
-## functions do
+## By mean of OOP concept encapsulation, the following two functions improve the performance of solve()
+## when it is used for the calcilating the inverse of a matrix.
 
-## Write a short comment describing this function
+
+## makeCacheMatrix create matrix object. 
+## This function set and get the value of the matrix and set and get the inverse value of the matrix
 
 makeCacheMatrix <- function(x = matrix()) 
 
 {
-invmatrix<-NULL
-set<-function(y)
+    invmatrix<-NULL
+    set<-function(y)
     {
       x<<-y
       invmatrix<<-NULL
@@ -16,7 +18,7 @@ set<-function(y)
     get<-function() x
     
     setInvMat <-function(inverseMatrix) invmatrix <<-inverseMatrix
-    getInvMat <-function() inverseMatrix
+    getInvMat <-function() invmatrix
     
     list(set = set, get = get, setInvMat = setInvMat, getInvMat = getInvMat)
 }
